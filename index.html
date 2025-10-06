@@ -5,8 +5,184 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Around News</title>
     <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-    
+      <!-- SITE CONTAINER -->
+  <div class="site">
+
+    <!-- SITE HEADER -->
+    <header class="site_header">
+      <div class="topbar">
+        <div class="topbar_left">
+          <!-- Social icons placeholder -->
+          <nav class="social">
+            <a href="#" aria-label="facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" aria-label="twitter"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="instagram"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="#" aria-label="instagram"><i class="fa-brands fa-square-x-twitter"></i></a>
+          </nav>
+        </div>
+        <div class="topbar_center">
+          <h1 class="site-title">News For Today</h1>
+        </div>
+        <div class="topbar_right">
+          <button class="contact-btn"> 
+            <i class="fa-solid fa-phone"></i> (+989) 717-515
+          </button>
+        </div>
+      </div>
+
+      <!-- MAIN NAV -->
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul id="main-nav-list" class="main-nav__list">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">International</a></li>
+          <li><a href="#">Business</a></li>
+          <li><a href="#">Politics</a></li>
+          <li><a href="#">Technology</a></li>
+          <li><a href="#">Fashion</a></li>
+          <li><a href="#">Corona</a></li>
+          <li><a href="#">Sports</a></li>
+          <li><a href="#">Video</a></li>
+          <li><a href="#">Monday, 06 October 2025</a></li>
+        </ul>
+      </nav>
+
+      <!-- BREAKING NEWS / TICKER -->
+      <div class="breaking">
+        <span class="breaking__label">Breaking News</span>
+        <div class="breaking__ticker" aria-live="polite">
+          <!-- You can implement a JS ticker or a CSS animation later -->
+          <span>International Migrants Day: 280 million people leave home for a better life. &rarr; FIFA World Cup 2022: A Night To Remember. &rarr; Johnny Deep reprises Jack Sparrow</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="main" id="content">
+
+      <!-- Top region: recent list (left), featured (center), sidebar (right) -->
+      <section class="home-top">
+        <!-- Recent News list (left column) -->
+        <aside class="recent-news" aria-labelledby="recent-news-heading">
+          <h2 id="recent-news-heading">Recent News</h2>
+          <ul class="recent-news__list">
+            <li class="recent-news__item">
+              <h3><a href="#">Twitter users vote to oust Musk as CEO</a></h3>
+              <p class="meta">Cristian Romero — 10 Jan, 2023</p>
+            </li>
+            <li class="recent-news__item">
+              <h3><a href="#">Perseverance rover set to make store of rocks</a></h3>
+              <p class="meta">De Paul — 10 Jan, 2023</p>
+            </li>
+            <li class="recent-news__item">
+              <h3><a href="#">Argentina defeat France on penalties</a></h3>
+              <p class="meta">Paulo Dybala — 10 Jan, 2023</p>
+            </li>
+            <li class="recent-news__item">
+              <h3><a href="#">China develops its own vaccines</a></h3>
+              <p class="meta">Juan Foyth — 10 Jan, 2023</p>
+            </li>
+          </ul>
+        </aside>
+
+        <!-- Featured article (center column) -->
+        <article class="featured" aria-labelledby="featured-heading">
+          <figure class="featured__media">
+            <img src="https://www.motherjones.com/wp-content/uploads/2022/03/pturnley_020a.jpg?w=1300" alt="Featured image: crowd helping refugees">
+            <figcaption class="sr-only">Main feature image</figcaption>
+          </figure>
+          <div class="featured__content">
+            <h2 id="featured-heading">In Focus: War in Ukraine is going to crisis for women and girls</h2>
+            <p class="lead">The war has severely impacted social cohesion, community security and resilience of local communities, especially women and girls...</p>
+            <div class="featured__meta">
+              <span>By Alexis Mac</span> · <time datetime="2023-01-10">10-01-23</time>
+              <span class="featured__stats">25 Likes · 39 Comments</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Sidebar (right column) -->
+        <aside class="sidebar" aria-labelledby="sidebar-heading">
+          <h2 id="sidebar-heading" class="sr-only">Highlights</h2>
+
+          <div class="sidebar__card">
+            <img src="https://via.placeholder.com/300x180" alt="Argentina team celebrating">
+            <h3><a href="#">Argentina won the FIFA World Cup</a></h3>
+            <p class="meta">Argentina vs France — 4-2 penalties</p>
+          </div>
+
+          <div class="sidebar__card">
+            <img src="https://via.placeholder.com/300x160" alt="Elon Musk portrait">
+            <h3><a href="#">Twitter users vote oust Musk, CEO</a></h3>
+            <p class="meta">Poll results show public pressure...</p>
+          </div>
+        </aside>
+      </section>
+
+      <!-- Section: International (grid of cards) -->
+      <section class="section section--international" aria-labelledby="international-heading">
+        <div class="section__header">
+          <h2 id="international-heading">INTERNATIONAL</h2>
+        </div>
+
+        <div class="cards cards--three">
+          <article class="card">
+            <img src="https://via.placeholder.com/400x250" alt="Masked people">
+            <h3><a href="#">China Covid: Everyone know is getting a fever in China.</a></h3>
+            <p class="excerpt">In the past two weeks, the Chinese internet has been flooded with posts about how people were pulling through...</p>
+          </article>
+
+          <article class="card">
+            <img src="https://via.placeholder.com/400x250" alt="Zelensky speaking">
+            <h3><a href="#">Zelensky invokes World War II, says 'no compromises'.</a></h3>
+            <p class="excerpt">Invoking memories of the US victory over Nazi Germany in a key WWII battle...</p>
+          </article>
+
+          <article class="card">
+            <img src="https://via.placeholder.com/400x250" alt="Netanyahu speaking">
+            <h3><a href="#">Biden congratulates Israel's Netanyahu in phone call.</a></h3>
+            <p class="excerpt">Joe Biden has congratulated Israel's Benjamin on his election victory as incoming prime minister...</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Section: Sports (example smaller grid) -->
+      <section class="section section--sports" aria-labelledby="sports-heading">
+        <div class="section__header">
+          <h2 id="sports-heading">SPORTS</h2>
+        </div>
+
+        <div class="cards cards--two">
+          <article class="card">
+            <img src="https://via.placeholder.com/600x320" alt="Sports image 1">
+            <h3><a href="#">Being awarded the Golden Ball...</a></h3>
+            <p class="excerpt">Short sports excerpt goes here...</p>
+          </article>
+
+          <article class="card">
+            <img src="https://via.placeholder.com/600x320" alt="Sports image 2">
+            <h3><a href="#">Match highlights and reactions</a></h3>
+            <p class="excerpt">Short sports excerpt goes here...</p>
+          </article>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- SITE FOOTER -->
+    <footer class="site__footer">
+      <div class="footer__inner">
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="#">About</a> ·
+          <a href="#">Contact</a> ·
+          <a href="#">Privacy</a>
+        </nav>
+        <p class="copyright">&copy; <span id="year"></span> News For Today</p>
+      </div>
+    </footer>
+
+  </div>
 </body>
 </html>
