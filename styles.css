@@ -116,10 +116,10 @@ body {
     padding: 10px;
 }
 
-#recent-news-heading {
+#recent-news-heading, #sidebar-heading {
     font-family: 'Montserrat', sans-serif;
     text-decoration: underline;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
 }
 
@@ -131,4 +131,90 @@ body {
 .featured__media img {
     width: 500px;
     object-fit: cover;
+}
+
+.recent-news__list h3 a, .sidebar__card h3 a {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    color: black;
+}
+
+.recent-news__list h3 a:hover, .sidebar__card h3 a:hover {
+    text-decoration: underline;
+}
+
+.recent-news__list p, .sidebar__card p, .featured__content p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    color: gray;
+}
+
+.sidebar__card img {
+    width: 80%;
+    object-fit: cover;
+}
+
+#featured-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 10px 0 5px 0;
+}
+
+.featured__meta {
+    display: flex;
+    flex-direction: column;
+}
+
+.featured__meta span, .featured__meta time {
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    color: gray;
+    font-style: italic;
+}
+
+#international-heading {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: underline;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 25px 0 10px 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+}
+
+.card {
+    padding: 0 20px;
+}
+
+.card h3 a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+}
+
+.card h3 a:hover {
+    text-decoration: underline;
+}
+
+.card p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    color: gray;
+}
+
+#sports-heading {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: underline;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 25px 0 10px 20px;
 }
