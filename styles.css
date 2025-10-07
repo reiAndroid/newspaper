@@ -120,6 +120,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     text-decoration: underline;
     font-size: 18px;
+    font-size: 18px;
     font-weight: 600;
     margin-bottom: 40px;
 }
@@ -134,13 +135,8 @@ body {
 }
 
 .featured__media img {
-    width: 100%;
-    object-fit: cover
-}
-
-.featured__content {
-    width: 100%;
-    margin: 5px 5px;
+    width: 500px;
+    object-fit: cover;
 }
 
 .recent-news__list h3 a, .sidebar__card h3 a {
