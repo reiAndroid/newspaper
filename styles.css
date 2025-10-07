@@ -110,7 +110,7 @@ body {
 .home-top {
     width: 99%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     justify-content: center;
     gap: 10px;
     padding: 10px;
@@ -119,8 +119,9 @@ body {
 #recent-news-heading, #sidebar-heading {
     font-family: 'Montserrat', sans-serif;
     text-decoration: underline;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
+    margin-bottom: 40px;
 }
 
 .featured {
@@ -128,9 +129,18 @@ body {
     padding: 0 10px;
 }
 
+.featured__media {
+    margin: 15px 5px 5px 5px;
+}
+
 .featured__media img {
-    width: 500px;
-    object-fit: cover;
+    width: 100%;
+    object-fit: cover
+}
+
+.featured__content {
+    width: 100%;
+    margin: 5px 5px;
 }
 
 .recent-news__list h3 a, .sidebar__card h3 a {
@@ -217,4 +227,24 @@ body {
     font-size: 16px;
     font-weight: 600;
     margin: 25px 0 10px 20px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .home-top {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .home-top {
+        grid-template-columns: 1fr;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
 }
