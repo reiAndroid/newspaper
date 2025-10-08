@@ -116,12 +116,28 @@ body {
     padding: 10px;
 }
 
+.recent-news__list, .sidebar__card {
+    display: flex;
+    flex-direction: column;
+    margin: 0 15px;
+    padding: 0 10px;
+}
+
+.recent-news__item h3, .sidebar__card h3 {
+    margin: 0 0 15px 0;
+}
+
+.recent-news__item p, .sidebar__card p {
+    margin: 0 0 15px 0;
+}
+
 #recent-news-heading, #sidebar-heading {
     font-family: 'Montserrat', sans-serif;
     text-decoration: underline;
     font-size: 18px;
+    font-size: 18px;
     font-weight: 600;
-    margin-bottom: 40px;
+    margin: 0 0 10px 0;
 }
 
 .featured {
@@ -130,39 +146,14 @@ body {
 }
 
 .featured__media {
+    display: flex;
     margin: 15px 5px 5px 5px;
 }
 
 .featured__media img {
     width: 100%;
-    object-fit: cover
-}
-
-.featured__content {
-    width: 100%;
-    margin: 5px 5px;
-}
-
-.recent-news__list h3 a, .sidebar__card h3 a {
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-    color: black;
-}
-
-.recent-news__list h3 a:hover, .sidebar__card h3 a:hover {
-    text-decoration: underline;
-}
-
-.recent-news__list p, .sidebar__card p, .featured__content p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 10px;
-    color: gray;
-}
-
-.sidebar__card img {
-    width: 80%;
     object-fit: cover;
+    margin: 0 auto;
 }
 
 .recent-news__list h3 a, .sidebar__card h3 a {
@@ -243,10 +234,129 @@ body {
     color: gray;
 }
 
+.card img {
+    width: 65%;
+    object-fit: cover;
+}
+
 #sports-heading {
     font-family: 'Montserrat', sans-serif;
     text-decoration: underline;
     font-size: 16px;
     font-weight: 600;
     margin: 25px 0 10px 20px;
+}
+
+/* Hide checkbox (but keep it accessible for screen readers) */
+.nav-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Hamburger icon base */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: black;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+@media only screen and (max-width: 1024px) {
+
+    body {
+        padding: 5px 5px;
+    }
+
+    .home-top {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    #main-nav-list {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cards {
+        grid-template-columns: 1fr 1fr ;
+    }
+
+    .breaking {
+        margin: 20px 0;
+        flex-direction: column;
+    }
+
+    .breaking__label {
+        background-color: white;
+        color: red;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .home-top {
+        grid-template-columns: 1fr;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .topbar {
+        margin-right: 50px;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+
+    /* Turn nav into a hidden overlay */
+    .main-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 60%;
+        height: 100%;
+        background-color: black;
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+
+    #main-nav-list {
+        display: flex;
+        flex-direction: column;
+        margin: 30px 0;
+    }
+
+    /* Show nav when checkbox is checked */
+    .nav-toggle:checked ~ .main-nav {
+        right: 0;
+    }
+
+    /* Animate icon: turn bars into X */
+    .nav-toggle:checked + .hamburger i::before {
+        content: "\f00d"; /* Font Awesome X icon */
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        color: white;
+    }
+
+    /* Stack menu items vertically */
+    #main-nav-list {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #main-nav-list li {
+        width: 100%;
+    }
+
+    #main-nav-list li a {
+        font-size: 14px;
+        text-align: center;
+    }
 }
