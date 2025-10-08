@@ -116,25 +116,9 @@ body {
     padding: 10px;
 }
 
-.recent-news__list, .sidebar__card {
-    display: flex;
-    flex-direction: column;
-    margin: 0 15px;
-    padding: 0 10px;
-}
-
-.recent-news__item h3, .sidebar__card h3 {
-    margin: 0 0 15px 0;
-}
-
-.recent-news__item p, .sidebar__card p {
-    margin: 0 0 15px 0;
-}
-
 #recent-news-heading, #sidebar-heading {
     font-family: 'Montserrat', sans-serif;
     text-decoration: underline;
-    font-size: 18px;
     font-size: 18px;
     font-weight: 600;
     margin: 0 0 10px 0;
